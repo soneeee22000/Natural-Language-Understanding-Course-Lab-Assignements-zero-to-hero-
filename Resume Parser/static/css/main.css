@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#homepage-header {
+    background-color: #A0C3D2;
+    color: white;
+    padding: 15px 0;
+    border-radius: 20px;
+}
+
+#homepage-intro {
+    background-color: #F7F5EB;
+    padding: 20px;
+    text-align: center;
+}
+
+#homepage-form {
+    background-color: #EAE0DA;
+    padding: 50px;
+    text-align: center;
+}
+
+td,
+th {
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+table {
+    margin: 10px 0;
+}
+
+table div {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.education-background {
+    background-color: #00425A;
+    color: white;
+}
+
+.skill-background {
+    background-color: antiquewhite;
+}

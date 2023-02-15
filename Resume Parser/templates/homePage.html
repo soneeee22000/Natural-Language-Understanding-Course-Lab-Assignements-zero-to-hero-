@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Resume Parser</title>
+{% endblock %}
+
+{% block content %}
+<div>
+    <h1 id="homepage-header">Resume Parser <i class="bi bi-person-vcard-fill"></i></h1>
+</div>
+
+<div id="homepage-intro">
+    <h4>Why use Our Parser???</h4>
+    <p>
+        <ul>
+            <li>Our parser is very easy to use</li>
+            <li>It is very fast</li>
+            <li>It is very accurate</li>
+            <li>It is free</li>
+        </ul>
+    </p>
+</div>
+
+<div id="homepage-form">
+    <h3>Upload Resume</h3>
+    <form action="/uploadResume" method="POST" enctype="multipart/form-data">
+        <input type="file" id="File" name="File" accept=".pdf">
+        <button type="submit" class="btn btn-secondary">Parse</button>
+    </form>
+    <p><b>Note:</b> We can only accept files only in pdf format </p>
+</div>
+{% endblock %}
