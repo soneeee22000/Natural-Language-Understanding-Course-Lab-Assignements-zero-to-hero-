@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Sentiment Analysis of Reddit Posts</title>
+{% endblock %}
+
+{% block content %}
+<p id="reddit-icon"><i class="bi bi-reddit"></i></p>
+<h1>Sentiment Analysis of Reddit Posts</h1>
+
+<div id="subreddit-form">
+    <h4>Analyze Sentiment of a Subreddit based on Reddit Posts</h4>
+    <form action="/searchSubreddit" method="POST" enctype="multipart/form-data">
+        <label for="subreddit" class="form-label">Enter name of Subreddit</label>
+        <input type="text" class="form-control" name="Subreddit" placeholder="Subreddit" id="subreddit">
+        <button type="submit" class="btn btn-dark">Analyze</button>
+    </form>
+</div>
+{% endblock %}

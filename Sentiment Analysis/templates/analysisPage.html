@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Sentiment Analysis</title>
+{% endblock %}
+
+{% block content %}
+<div id="result-header">
+    <h1>Sentiment Analysis</h1>
+    <h3>Subreddit: {{ subreddit }}</h3>
+</div>
+
+<a href="{{ url_for('index') }}" class="return-button button btn btn-primary">Return to Home Page</a>
+
+<h3>Subreddit Posts</h3>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Upvotes</th>
+        <th>Sentiment</th>
+    </tr>
+    {% for idx in range(length) %}
+    <tr>
+        <td>{{ titles[idx] }}</td>
+        <td>{{ upvotes[idx] }}</td>
+        {% if sentiment[idx] == 1 %}
+        <td class="postive-sentiment">
+            {{ "positive" }}
+        </td>
+        {% else %}
+        <td class="negative-sentiment">
+            {{ "negative" }}
+        </td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+
+<h3>Sentiment Count of Subreddit Posts</h3>
+<img class="plot" src="data:image/png;base64, {{ sentiment_plot }}">
+
+
+<h3 class="top-words-header">Top 5 Positive Words</h3>
+<div id="positive-words">
+    {% for pos_word in top_five_pos_word %}
+        <div>{{ pos_word }}</div>
+    {% endfor %}
+</div>
+
+<h3 class="top-words-header">Top 5 Negative Words</h3>
+<div id="negative-words">
+    {% for neg_word in top_five_neg_word %}
+        <div>{{ neg_word }}</div>
+    {% endfor %}
+</div>
+{% endblock %}
