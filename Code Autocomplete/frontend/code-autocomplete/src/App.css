@@ -1,0 +1,30 @@
+.app {
+  text-align: center;
+}
+
+.component-padding {
+  padding: 0 20px;
+}
+
+#request-button {
+  margin-top: 10px;
+}
+
+.suggestion-component {
+  background-color: #BAD7E9;
+  min-height: 500px;
+  margin-right: 20px;
+  border: 1px solid black;
+}
+
+.suggestion-box {
+  background-color: #FCFFE7;
+  margin: 15px auto;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+#clear-suggestions-button {
+  margin-bottom: 10px;
+}
